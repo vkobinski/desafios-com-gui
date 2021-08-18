@@ -29,7 +29,7 @@ def errou(tentativas):
     sg.theme('Reddit')
     layout = [
         [sg.Text('Você errou!')],
-        [sg.Text(text=f'Você ainda tem {tentativas} tentativas')],
+        [sg.Text(text=f'Você têm {tentativas} tentativas')],
         [sg.Button('Fechar')]
     ]
     return sg.Window('Errou!', layout=layout, finalize=True)
