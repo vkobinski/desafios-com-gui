@@ -78,6 +78,21 @@ while True:
         janela_salvar = salvar()
 
     if event == 'Usuarios Salvos':
+        try:
+            f = open("usuarios.txt", "r")
+            while True:
+                linha = f.readline()
+                usuario = linha.split()
+                if usuario != "":
+                    usuarios.append(usuario[0])
+                    idades.append(usuario[1])
+                    emails.append(usuario[2])
+                else:
+                    break
+
+        except:
+            f = open("usuarios.txt", 'a')
+
         janela_usuarios = tela_usuarios()
 
     if event == 'Exibir':
